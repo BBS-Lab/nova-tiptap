@@ -1,30 +1,25 @@
 <template>
-    <span>
-        <button
-            v-for="level in headingLevels"
-            :key="'heading-button'+level"
-            type="button"
-            class="
-                btn
-                btn-default
-                p-2
-                leading-none
-                text-xs
-                min-w-8
-                h-8
-                tiptap-button
-            "
-            :class="{ 'btn-primary': isActive.heading({ level: level }) }"
-            @click="commands.heading({ level: level })"
-        >
-          H{{  level  }}
-        </button>
-    </span>
+  <span>
+    <menu-button
+      v-for="level in headingLevels"
+      :key="'heading-button'+level"
+      :active="isActive.heading({ level: level })"
+      @click="commands.heading({ level: level })"
+    >
+      H{{  level  }}
+    </menu-button>
+  </span>
 </template>
 
 <script>
+import MenuButton from './MenuButton'
+
 export default {
-    props: ['headingLevels', 'isActive', 'commands'],
+  props: ['headingLevels', 'isActive', 'commands'],
+
+  components: {
+    MenuButton,
+  }
 }
 </script>
 

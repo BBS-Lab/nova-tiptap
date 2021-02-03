@@ -1,6 +1,6 @@
 <?php
 
-namespace Manogi\Tiptap;
+namespace BbsLab\NovaTiptapField;
 
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\Expandable;
@@ -14,7 +14,7 @@ class Tiptap extends Field
      *
      * @var string
      */
-    public $component = 'tiptap';
+    public $component = 'nova-tiptap-field';
 
     /**
      * Indicates if the element should be shown on the index view.
@@ -39,7 +39,7 @@ class Tiptap extends Field
     /**
      * Set the heading levels that should be available when using headings
      *
-     * @param  mixed  $headingLevels
+     * @param  array|int  $headingLevels
      * @return $this
      */
     public function headingLevels($headingLevels)

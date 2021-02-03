@@ -1,6 +1,6 @@
 <?php
 
-namespace Manogi\Tiptap;
+namespace BbsLab\NovaTiptapField;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

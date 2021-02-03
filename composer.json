@@ -1,5 +1,5 @@
 {
-    "name": "manogi/nova-tiptap",
+    "name": "bbs-lab/nova-tiptap-field",
     "description": "A Laravel Nova tiptap editor field.",
     "keywords": [
         "laravel",
@@ -9,29 +9,18 @@
         "editor"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
-        }
-    ],
     "require": {
         "php": ">=7.3.0"
     },
-    "require-dev": {
-        "laravel/nova": "~3.0",
-        "orchestra/testbench": "^5.3",
-        "phpunit/phpunit": "^9.2"
-    },
     "autoload": {
         "psr-4": {
-            "Manogi\\Tiptap\\": "src/"
+            "BbsLab\\NovaTiptapField\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Manogi\\Tiptap\\FieldServiceProvider"
+                "BbsLab\\NovaTiptapField\\FieldServiceProvider"
             ]
         }
     },
